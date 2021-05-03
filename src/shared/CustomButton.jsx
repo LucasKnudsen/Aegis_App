@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom'
 
 const CustomButton = ({ text, link }) => {
   return (
-    <Link to={link} style={styles.buttonContainer} component={motion.a}
-      whileTap={{ backgroundColor: '#4e4acb', scale: 1.1 }}>
+    <Link to={link} style={styles.buttonContainer}>
       <Button style={styles.button}
-
       >
         {text}
       </Button>
@@ -24,7 +22,7 @@ const styles = {
     fontWeight: 'bold',
     padding: '10px 15px',
     borderRadius: 25,
-
+    zIndex: 500
   },
   buttonContainer: {
     textDecoration: 'none',
@@ -32,7 +30,6 @@ const styles = {
     borderRadius: 25,
     margin: 10,
     textAlign: 'center',
-    appearance: 'none',
-    outline: 'none'
+    color: 'white'
   }
 }

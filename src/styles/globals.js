@@ -7,7 +7,7 @@ export const globals = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: variables.bgColor,
+    zIndex: -1,
     fontFamily: 'Nunito',
     color: 'white',
     alignItems: 'center',
