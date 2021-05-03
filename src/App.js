@@ -5,10 +5,12 @@ import LandingPage from './views/LandingPage';
 import { AnimatePresence } from 'framer-motion'
 import Footer from './components/Footer';
 import About from './views/About';
+import ChooseStocks from './views/ChooseStocks';
+import Funds from './views/Funds';
 
 const App = () => {
   const location = useLocation();
-  console.log('I render')
+
   return (
     <>
      <Footer />
@@ -16,6 +18,8 @@ const App = () => {
         <Switch location={location} key={location.pathname}>
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/choose-stocks' component={ChooseStocks} />
+          <Route exact path='/funds' component={Funds} />
           <Route exact path='/about' component={About} />
         </Switch>
       </AnimatePresence>

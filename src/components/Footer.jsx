@@ -59,6 +59,7 @@ const styles = {
   iconContainer: {
     border: '2px solid white',
     borderRadius: '25%',
+    boxShadow: '5px 7px 5px'
   },
   iconButton: {
     display: 'flex',

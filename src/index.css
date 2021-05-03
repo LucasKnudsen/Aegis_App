@@ -4,7 +4,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Nunito', sans-serif;
-  color: white;
+
   list-style-type: none;
   text-decoration: none;
 }
@@ -12,9 +12,14 @@
 body {
   overflow: hidden;
   background: #202031;
+
 }
 
 span {
-  background: transparent
+  background: transparent;
+}
+
+.MuiIconButton-label {
+  color: white
 }
 
