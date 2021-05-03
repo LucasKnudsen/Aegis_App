@@ -23,3 +23,11 @@ span {
   color: white
 }
 
+.MuiAutocomplete-clearIndicator > .MuiIconButton-label {
+  color:  #202031
+}
+
+.MuiAutocomplete-popupIndicator > .MuiIconButton-label {
+  color:  #202031
+}
+

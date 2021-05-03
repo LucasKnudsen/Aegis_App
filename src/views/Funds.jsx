@@ -36,8 +36,10 @@ const Funds = () => {
     >
       <BackButton />
       <HeaderNote text='Step 2 / 3' />
-
+      
+      <p style={{...globals.text, marginTop: 100}}>Fill in your funds for respective stocks</p>
       <TableContainer style={styles.tableContainer}>
+        
         <Table>
           <TableHead>
             <TableRow >
@@ -63,7 +65,7 @@ const Funds = () => {
       <div style={{ height: 100, marginTop: 75}}>
           { showNext() && (
             <motion.div variants={buttonVariants}>
-              <CustomButton text='Next' />
+              <CustomButton text='Next' link={{pathname: '/hedge-self', state: {portfolio, state}}} />
             </motion.div>
           ) }
       </div>
@@ -77,11 +79,11 @@ export default Funds
 const styles = {
   tableContainer: {
     backgroundColor: 'white',
-    width: 250,
+    width: '80%',
     borderRadius: 5,
-    maxHeight: 300,
-    overflow: 'scroll',
-    marginTop: 100
+    maxHeight: 325,
+    overflowY: 'scroll',
+    marginTop: 25
   },
   tableRow: {
     alignItems: 'center',

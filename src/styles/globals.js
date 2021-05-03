@@ -18,11 +18,12 @@ export const globals = {
   text: {
     color: 'white',
     fontFamily: 'Nunito',
-    fontSize: 15
+    fontSize: 17
   },
   title: {
     color: 'white',
     fontFamily: 'Nunito',
+    fontSize: 25
   }
 
 }

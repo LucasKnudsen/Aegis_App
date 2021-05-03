@@ -28,7 +28,6 @@ const ChooseStocks = () => {
       <HeaderNote text='Step 1 / 3' />
       <div style={styles.searchField}>
         <Autocomplete
-          style={{ color: 'black' }}
           multiple
           fullWidth={true}
           onChange={handleChange}
@@ -51,17 +50,17 @@ const ChooseStocks = () => {
               variant="filled"
               label="Choose stocks"
               placeholder="GameStop..."
-              style={{ color: 'white' }}
+             
             />
           )}
         />
       </div>
 
-      <p style={{marginBottom: 25}}>Choose your risk level:</p>
+      <p style={{ marginBottom: 25, ...globals.text }}>Choose your risk level:</p>
 
       <div>
-        <ToggleButtonGroup exclusive size='large'
-        onChange={(event, newValue) => setRisk(newValue)}
+        <ToggleButtonGroup exclusive size='middle'
+          onChange={(event, newValue) => setRisk(newValue)}
         >
           <ToggleButton
             value='low'
@@ -87,12 +86,12 @@ const ChooseStocks = () => {
         </ToggleButtonGroup>
       </div>
 
-      <div style={{ height: 100}}>
-          {risk ? stocks ? (
-            <motion.div variants={buttonVariants}>
-              <CustomButton text='Next' link={{pathname: '/funds', state: {stocks, risk} }} />
-            </motion.div>
-          ) : <></> : <></>}
+      <div style={{ height: 100 }}>
+        {risk ? stocks ? (
+          <motion.div variants={buttonVariants}>
+            <CustomButton text='Next' link={{ pathname: '/funds', state: { stocks, risk } }} />
+          </motion.div>
+        ) : <></> : <></>}
       </div>
 
     </motion.div>
@@ -105,16 +104,16 @@ const styles = {
   riskButtons: {
     color: 'white',
     border: '2px solid #4e4acb',
-    margin: '0 10px 25px 10px',
+    margin: '0 10px 30px 10px',
     borderRadius: 5
   },
   searchField: {
     width: '80%',
     backgroundColor: 'white',
     borderRadius: 10,
-    marginTop: 100,
-    marginBottom: 25,
+    marginTop: 125,
+    marginBottom: 50,
     maxHeight: 150,
-    overflow: 'scroll'
+    overflowY: 'scroll'
   }
 }

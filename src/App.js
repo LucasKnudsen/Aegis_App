@@ -9,6 +9,7 @@ import ChooseStocks from './views/ChooseStocks';
 import Funds from './views/Funds';
 import FAQ from './views/FAQ';
 import Profile from './views/Profile';
+import ProtectionOwn from './views/ProtectionOwn';
 
 const App = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const App = () => {
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/dashboard' component={Dashboard} />
           <Route exact path='/choose-stocks' component={ChooseStocks} />
+          <Route exact path='/hedge-self' component={ProtectionOwn} />
           <Route exact path='/funds' component={Funds} />
           <Route exact path='/about' component={About} />
           <Route exact path='/faq' component={FAQ} />

@@ -51,7 +51,7 @@ const styles = {
     width: '100%',
     backgroundColor: '#4e4acb',
     zIndex: 2,
-    boxShadow: 'inset 0px 10px 15px'
+    boxShadow: 'inset 0px 5px 10px'
   },
   icon: {
     height: 40,
