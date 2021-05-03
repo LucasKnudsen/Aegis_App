@@ -25,12 +25,12 @@ const Footer = ({ location }) => {
           <InfoOutlinedIcon style={styles.icon} />
         </IconButton>
       </Link>
-      <Link style={styles.iconContainer}>
+      <Link style={styles.iconContainer} to='/faq'>
         <IconButton style={styles.iconButton}>
           <LiveHelpOutlinedIcon style={styles.icon} />
         </IconButton>
       </Link>
-      <Link style={styles.iconContainer}>
+      <Link style={styles.iconContainer} to='/profile'>
         <IconButton style={styles.iconButton}>
           <PersonOutlineOutlinedIcon style={styles.icon} />
         </IconButton>
@@ -51,6 +51,7 @@ const styles = {
     width: '100%',
     backgroundColor: '#4e4acb',
     zIndex: 2,
+    boxShadow: 'inset 0px 10px 15px'
   },
   icon: {
     height: 40,

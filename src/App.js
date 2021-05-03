@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import About from './views/About';
 import ChooseStocks from './views/ChooseStocks';
 import Funds from './views/Funds';
+import FAQ from './views/FAQ';
+import Profile from './views/Profile';
 
 const App = () => {
   const location = useLocation();
@@ -21,6 +23,8 @@ const App = () => {
           <Route exact path='/choose-stocks' component={ChooseStocks} />
           <Route exact path='/funds' component={Funds} />
           <Route exact path='/about' component={About} />
+          <Route exact path='/faq' component={FAQ} />
+          <Route exact path='/profile' component={Profile} />
         </Switch>
       </AnimatePresence>
      
