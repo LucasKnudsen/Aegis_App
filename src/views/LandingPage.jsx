@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 const LandingPage = () => {
   return (
-    <motion.div id='landing-page' style={{ ...globals.container, justifyContent: 'space-evenly' }}
+    <motion.div id='landing-page' style={{ ...globals.container, justifyContent: 'space-evenly', height: '100vh', maxHeight: '100vh' }}
       variants={landingSlideVariants} initial='initial' animate='animate' exit='exit' >
 
       <div style={{ textAlign: 'center' }}

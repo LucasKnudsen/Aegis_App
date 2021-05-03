@@ -19,13 +19,14 @@ const styles = {
   button: {
     color: 'white',
     fontWeight: 'bold',
-    padding: '10px 15px',
+ 
     borderRadius: 25,
     zIndex: 500
   },
   buttonContainer: {
     textDecoration: 'none',
     border: '2px solid #4e4acb',
+    padding: '5px 15px',
     borderRadius: 25,
     margin: 10,
     textAlign: 'center',

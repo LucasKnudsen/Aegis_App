@@ -12,8 +12,8 @@ export const globals = {
     color: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
-    maxHeight: '100vh'
+    height: '85vh',
+    maxHeight: '85vh'
   },
   text: {
     color: 'white',

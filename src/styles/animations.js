@@ -14,9 +14,9 @@ export const landingSlideVariants = {
   },
   exit: {
     x: '-100vw',
+    transition: {
+      ease: [0.43, 0.13, 0.23, 0.96]
   },
-  transition: {
-    ease: [0.43, 0.13, 0.23, 0.96]
   }
 }
 
@@ -26,7 +26,7 @@ export const containerSlideVaiants = {
   },
   animate: {
     x: 0,
-    transition: { type: 'spring' }
+    transition: {duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
   },
   exit: {
     x: '-100%',
@@ -40,6 +40,6 @@ export const footerVariants = {
   },
   animate: {
     y: 0,
-    transition: { delay: 2, duration: 1, }
+    transition: { duration: 1, delay: 0.5 }
   }
 }

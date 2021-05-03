@@ -47,7 +47,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    height: '10%',
+    height: '15vh',
     width: '100%',
     backgroundColor: '#4e4acb',
     zIndex: 2,
