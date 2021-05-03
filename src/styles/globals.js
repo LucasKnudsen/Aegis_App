@@ -1,7 +1,7 @@
-const variables = {
-  mainColor: '#4e4acb',
-  bgColor: '#202031'
-}
+// const variables = {
+//   mainColor: '#4e4acb',
+//   bgColor: '#202031'
+// }
 
 export const globals = {
   container: {

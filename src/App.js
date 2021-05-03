@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch, useLocation } from 'react-router-dom'
+import {  Route, Switch, useLocation } from 'react-router-dom'
 import Dashboard from './views/Dashboard';
 import LandingPage from './views/LandingPage';
 import { AnimatePresence } from 'framer-motion'

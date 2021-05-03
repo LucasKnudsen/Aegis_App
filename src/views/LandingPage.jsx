@@ -14,7 +14,7 @@ const LandingPage = () => {
 
       <div style={{ textAlign: 'center' }}
       >
-        <img src={logo} style={styles.logo} />
+        <img src={logo} style={styles.logo} alt="logo"/>
         <p style={globals.text}>Trading made easy</p>
       </div>
       <div style={styles.buttonsContainer}>
