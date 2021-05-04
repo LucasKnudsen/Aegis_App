@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { modalVariants } from '../styles/animations'
 
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
