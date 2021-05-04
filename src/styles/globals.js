@@ -13,7 +13,8 @@ export const globals = {
     alignItems: 'center',
     justifyContent: 'center',
     height: '85vh',
-    maxHeight: '85vh'
+    maxHeight: '85vh',
+    overflow: 'hidden'
   },
   text: {
     color: 'white',
@@ -25,5 +26,4 @@ export const globals = {
     fontFamily: 'Nunito',
     fontSize: 25
   }
-
 }

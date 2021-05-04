@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { globals } from '../styles/globals'
 import HeaderNote from '../shared/HeaderNote'
 import { containerSlideVaiants } from '../styles/animations'
 import BackButton from '../shared/BackButton'
+import video1 from '../assets/video1.mp4'
 
 import { motion } from 'framer-motion'
 import Paper from '@material-ui/core/Paper';
+import VideoModal from '../shared/VideoModal'
 
 const ProtectionOwn = () => {
+
   return (
     <motion.div id='dashboard' style={globals.container}
       variants={containerSlideVaiants} initial='initial' animate='animate' exit='exit'
@@ -20,7 +23,10 @@ const ProtectionOwn = () => {
         <p>b. Expire date xxxx</p>
         <p>c. Strike price</p>
       </Paper>
-
+      <div style={{marginTop: 75, display: 'flex', justifyContent: 'center' }}>
+        <VideoModal text='Not sure how to buy & sell options?' video={video1} />
+        <VideoModal text='Aegis stock protection in 100 seconds' />
+      </div>
     </motion.div>
   )
 }
@@ -31,5 +37,7 @@ const styles = {
   stratContainer: {
     padding: 25,
     fontSize: 20
-  }
+  },
+
 }
+// https://www.youtube.com/watch?v=FZvpjAMi-us&ab_channel=AndersHasleNielsen
