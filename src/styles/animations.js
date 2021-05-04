@@ -55,3 +55,15 @@ export const buttonVariants = {
     }
   }
 }
+
+export const modalVariants = {
+  initial: {
+    x: -'100%'
+  },
+  animate: {
+    x: 0,
+    transition: {
+      duration: 0.7,
+    }
+  }
+}

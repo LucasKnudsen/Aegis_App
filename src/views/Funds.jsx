@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { globals } from '../styles/globals'
 import CustomButton from '../shared/CustomButton'
 import HeaderNote from '../shared/HeaderNote'
@@ -13,7 +13,8 @@ import TableHead from '@material-ui/core/TableHead';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TextField from '@material-ui/core/TextField'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import Input from '@material-ui/core/Input'
 
 const Funds = () => {
   const { state } = useLocation()
@@ -31,15 +32,15 @@ const Funds = () => {
   }
 
   return (
-    <motion.div id='dashboard' style={{...globals.container, justifyContent: 'flex-start'}}
+    <motion.div id='dashboard' style={{ ...globals.container, justifyContent: 'flex-start' }}
       variants={containerSlideVaiants} initial='initial' animate='animate' exit='exit'
     >
       <BackButton />
       <HeaderNote text='Step 2 / 3' />
-      
-      <p style={{...globals.text, marginTop: 100}}>Fill in your funds for respective stocks</p>
+
+      <p style={{ ...globals.text, marginTop: 100 }}>Fill in your funds for respective stocks</p>
       <TableContainer style={styles.tableContainer}>
-        
+
         <Table>
           <TableHead>
             <TableRow >
@@ -53,7 +54,13 @@ const Funds = () => {
               <TableRow key={stock.name} style={styles.tableRow}>
                 <TableCell>{stock.name}:</TableCell>
                 <TableCell align="right">
-                  <TextField required type='number' name={stock.name} onChange={handleChange} />
+                  <Input
+                    required
+                    type='number'
+                    name={stock.name}
+                    onChange={handleChange}
+                    startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                  />
                 </TableCell>
               </TableRow>
             ))}
@@ -62,12 +69,12 @@ const Funds = () => {
         </Table>
       </TableContainer>
 
-      <div style={{ height: 100, marginTop: 75}}>
-          { showNext() && (
-            <motion.div variants={buttonVariants}>
-              <CustomButton text='Next' link={{pathname: '/hedge-self', state: {portfolio, state}}} />
-            </motion.div>
-          ) }
+      <div style={{ height: 100, marginTop: 75 }}>
+        {showNext() && (
+          <motion.div variants={buttonVariants}>
+            <CustomButton text='Next' link={{ pathname: '/hedge', state: { portfolio, state } }} />
+          </motion.div>
+        )}
       </div>
 
     </motion.div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { modalVariants } from '../styles/animations'
 
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
@@ -9,16 +10,20 @@ const VideoModal = ({ text, video }) => {
   const [open, setOpen] = useState(false)
 
   const body = (
-    <AnimatePresence>
-      <Button style={styles.closeButton} onClick={() => setOpen(false)}>
+    <>
+      <Button style={styles.closeButton} onClick={() => setOpen(false)} component={motion.button}
+        initial={{ y: '-100%', opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { duration: 0.7 } }} exit={{ y: '100%' }}
+      >
         Close
       </Button>
-      <Paper style={styles.modalContainer} component={motion.div}>
-        <video autoplay controls style={{width: '100%'}}>
-          <source src={video} type='video/mp4'/>
+
+      <Paper style={styles.modalContainer} component={motion.div}
+        initial={{ y: '100%', opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { duration: 0.7 } }} exit={{ y: '100%' }}>
+        <video autoplay controls style={{ width: '100%' }}>
+          <source src={video} type='video/mp4' />
         </video>
       </Paper>
-    </AnimatePresence>
+    </>
   )
 
   return (
@@ -26,12 +31,15 @@ const VideoModal = ({ text, video }) => {
       <Button style={styles.modalButton} onClick={() => setOpen(true)}>
         {text}
       </Button>
-      <Modal
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-        {body}
-      </Modal>
+      <AnimatePresence exitBeforeEnter>
+        <Modal
+          open={open}
+          onClose={() => setOpen(false)}
+          onExitComplete={() => setOpen(false)}
+        >
+          {body}
+        </Modal>
+      </AnimatePresence>
     </>
   )
 }
@@ -55,8 +63,8 @@ const styles = {
   modalContainer: {
     position: 'relative',
     margin: 'auto',
-    top: '45%',
-    transform: 'translateY(-55%)'
+    top: '30%',
+
   },
   closeButton: {
     position: 'relative',
@@ -66,8 +74,8 @@ const styles = {
     fontWeight: 'bold',
     boxShadow: 'inset 0 0 10px #202031',
     borderRadius: 10,
-    top: '30vw',
-    left: '50%',
-    transform: 'translateX(-50%)',
+    top: '35vw',
+    left: '45%',
+    transform: 'translateX(-40%)',
   }
 }
