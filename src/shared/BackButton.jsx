@@ -1,6 +1,8 @@
 import React from 'react'
 import CustomButton from './CustomButton'
 
+// Not used, but kept.
+
 const BackButton = () => {
   return (
     <div style={styles.backButton}>

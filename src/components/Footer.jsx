@@ -14,27 +14,39 @@ const Footer = ({ location }) => {
   return (
     <motion.div style={styles.footerContainer} variants={footerVariants}
       initial='initial' animate='animate'
-    >
+    > 
+    <div style={styles.wrapper}>
+      <p>Home</p>
       <Link style={styles.iconContainer} to='/dashboard'>
         <IconButton style={styles.iconButton}>
           <ShowChartIcon style={styles.icon} />
         </IconButton>
       </Link>
+    </div>
+      <div style={styles.wrapper}>
+      <p>About</p>
       <Link style={styles.iconContainer} to='/about'>
         <IconButton style={styles.iconButton}>
           <InfoOutlinedIcon style={styles.icon} />
         </IconButton>
       </Link>
+    </div>
+      <div style={styles.wrapper}>
+      <p>FAQ</p>
       <Link style={styles.iconContainer} to='/faq'>
         <IconButton style={styles.iconButton}>
           <LiveHelpOutlinedIcon style={styles.icon} />
         </IconButton>
       </Link>
+    </div>
+      <div style={styles.wrapper}>
+      <p>Profile</p>
       <Link style={styles.iconContainer} to='/profile'>
         <IconButton style={styles.iconButton}>
           <PersonOutlineOutlinedIcon style={styles.icon} />
         </IconButton>
       </Link>
+    </div>
     </motion.div>
   )
 }
@@ -51,16 +63,23 @@ const styles = {
     width: '100%',
     backgroundColor: '#4e4acb',
     zIndex: 2,
-    boxShadow: 'inset 0px 5px 10px'
+    boxShadow: '0px -5px 10px black',
+    color: 'white'
+  },
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   icon: {
-    height: 40,
-    width: 40,
+    height: 35,
+    width: 35,
   },
   iconContainer: {
     border: '2px solid white',
     borderRadius: '25%',
-    boxShadow: '5px 7px 5px'
+    boxShadow: '5px 7px 5px',
+    marginTop: 3,
   },
   iconButton: {
     display: 'flex',

@@ -1,15 +1,15 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const CustomButton = ({ text, link, back, ...props }) => {
-  const history = useHistory();
+const CustomButton = ({ text, link, ...props }) => {
   const styles = {
     button: {
       color: 'white',
       fontWeight: 'bold',
       borderRadius: 25,
-      zIndex: 500
+      zIndex: 500,
+      fontSize: 20,
     },
     buttonContainer: {
       textDecoration: 'none',
@@ -26,8 +26,7 @@ const CustomButton = ({ text, link, back, ...props }) => {
 
   return (
     <Link to={link} style={styles.buttonContainer}>
-      <Button style={styles.button} onClick={() => {back && history.goBack()} }
-      >
+      <Button style={styles.button} >
         {text}
       </Button>
     </Link>

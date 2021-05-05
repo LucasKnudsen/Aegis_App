@@ -13,8 +13,9 @@ export default HeaderNote
 const styles = {
   headerNote: {
     position: 'absolute',
-    top: 18,
-    right: 25,
-    fontWeight: 'bold'
+    top: 25,
+    margin: 'auto',
+    fontWeight: 'bold',
+    fontSize: 25,
   }
 }

@@ -30,8 +30,8 @@ export default LandingPage
 
 const styles = {
   logo: {
-    height: 250,
-    width: 250,
+    height: 300,
+    width: 300,
   },
   buttonsContainer: {
     display: 'flex',

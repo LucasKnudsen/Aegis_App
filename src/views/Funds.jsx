@@ -3,7 +3,6 @@ import { globals } from '../styles/globals'
 import CustomButton from '../shared/CustomButton'
 import HeaderNote from '../shared/HeaderNote'
 import { buttonVariants, containerSlideVaiants } from '../styles/animations'
-import BackButton from '../shared/BackButton'
 
 import { motion } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
@@ -35,7 +34,6 @@ const Funds = () => {
     <motion.div id='dashboard' style={{ ...globals.container, justifyContent: 'flex-start' }}
       variants={containerSlideVaiants} initial='initial' animate='animate' exit='exit'
     >
-      <BackButton />
       <HeaderNote text='Step 2 / 3' />
 
       <p style={{ ...globals.text, marginTop: 100 }}>Fill in your funds for respective stocks</p>

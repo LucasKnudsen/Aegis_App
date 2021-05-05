@@ -19,11 +19,13 @@ export const globals = {
   text: {
     color: 'white',
     fontFamily: 'Nunito',
-    fontSize: 17
+    fontSize: 18
   },
   title: {
     color: 'white',
     fontFamily: 'Nunito',
-    fontSize: 25
+    fontSize: 30,
+    padding: '0 20px',
+    textAlign: 'center'
   }
 }

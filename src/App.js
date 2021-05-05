@@ -24,8 +24,8 @@ const App = () => {
           <Route exact path='/dashboard' component={Dashboard} />
           <Route exact path='/choose-stocks' component={ChooseStocks} />
           <Route exact path='/hedge' component={Protection} />
-          <Route exact path='/funds' component={Funds} />
-          <Route exact path='/funds-recommended' component={RecommendedFunds} />
+          <Route exact path='/funds-old' component={Funds} />
+          <Route exact path='/funds' component={RecommendedFunds} />
           <Route exact path='/about' component={About} />
           <Route exact path='/faq' component={FAQ} />
           <Route exact path='/profile' component={Profile} />
