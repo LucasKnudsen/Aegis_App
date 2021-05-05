@@ -4,6 +4,7 @@ import HeaderNote from '../shared/HeaderNote'
 import { containerSlideVaiants, } from '../styles/animations'
 import BackButton from '../shared/BackButton'
 import video1 from '../assets/video1.mp4'
+import video2 from '../assets/video2.mp4'
 
 import { motion } from 'framer-motion'
 import Paper from '@material-ui/core/Paper';
@@ -26,7 +27,7 @@ const Protection = () => {
       </Paper>
       <div style={{ marginTop: 50, display: 'flex', justifyContent: 'center' }}>
         <VideoModal text='Not sure how to buy & sell options?' video={video1} />
-        <VideoModal text='Aegis stock protection in 100 seconds' />
+        <VideoModal text='Aegis stock protection in 100 seconds' video={video2} />
       </div>
     </motion.div>
   )
