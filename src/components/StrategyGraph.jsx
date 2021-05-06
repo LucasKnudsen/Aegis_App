@@ -31,23 +31,21 @@ const StrategyGraph = ({ data }) => {
     let profile = JSON.parse(localStorage.getItem('profile'))
   
     let newStrategy = {
-      name: data.stock ? data.stock.name : 'GameStop',
+      name: data.stocks.name,
       strike: Math.floor(Math.random()*1000),
       itm: 'Yes',
       date: new Date().toLocaleDateString('en-GB')
     }
-    
     profile.stocks.push(newStrategy)
     localStorage.setItem('profile', JSON.stringify(profile))
     setAdded(true)
-  
   }
 
   return (
     <div style={styles.graphContainer}>
       <div style={{ display: 'flex' }}>
         <div style={styles.stratContainer}>
-          <p style={{ fontWeight: 'bold', marginBottom: 5 }}>Stock: {data.stock ? data.stock.name : 'GameStop'}</p>
+          <p style={{ fontWeight: 'bold', marginBottom: 5 }}>Stock: {data.stocks ? data.stocks.name : 'GameStop'}</p>
           <p>a. Sell 3 put. Equity A</p>
           <p>b. Expire date xxxx</p>
           <p>c. Strike price</p>
@@ -62,7 +60,6 @@ const StrategyGraph = ({ data }) => {
               Add to strategies
             </Button>
           )}
-
         </div>
 
       </div>
@@ -78,7 +75,6 @@ const StrategyGraph = ({ data }) => {
             <stop offset="20%" stopColor="#4e4acb" stopOpacity={0.9} />
             <stop offset="95%" stopColor="#4e4acb" stopOpacity={0} />
           </linearGradient>
-
         </defs>
         <XAxis dataKey="year" />
         <YAxis />
@@ -86,8 +82,6 @@ const StrategyGraph = ({ data }) => {
         <Area type="monotone" dataKey="Gain" stroke="#4e4acb" fill="url(#gain)" />
       </AreaChart>
     </div >
-
-
   )
 }
 

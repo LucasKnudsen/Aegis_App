@@ -9,7 +9,7 @@ const CustomButton = ({ text, link, ...props }) => {
       fontWeight: 'bold',
       borderRadius: 25,
       zIndex: 500,
-      fontSize: 20,
+      fontSize: props.fontSize ? props.fontSize : 20,
     },
     buttonContainer: {
       textDecoration: 'none',

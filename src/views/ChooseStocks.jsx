@@ -1,5 +1,6 @@
 /* eslint-disable no-use-before-define */
 import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { globals } from '../styles/globals'
 import { buttonVariants, containerSlideVaiants } from '../styles/animations'
 import { stockList } from '../assets/stockList'
@@ -13,6 +14,7 @@ import HeaderNote from '../shared/HeaderNote'
 import CustomButton from '../shared/CustomButton'
 
 const ChooseStocks = () => {
+  const { state } = useLocation()
   const [stocks, setStocks] = useState()
   // const [risk, setRisk] = useState()
 
@@ -24,7 +26,7 @@ const ChooseStocks = () => {
     <motion.div id='dashboard' style={{ ...globals.container}}
       variants={containerSlideVaiants} initial='initial' animate='animate' exit='exit'
     >
-      <HeaderNote text='Step 1 / 3' />
+      <HeaderNote text='Step 2 / 3' />
       <p style={{ ...globals.text }}>Choose a stock you want to protect</p>
 
       <Paper style={styles.searchField}>
@@ -57,7 +59,7 @@ const ChooseStocks = () => {
       <div style={{ height: 100, marginTop: 75 }}>
         {stocks && (
           <motion.div variants={buttonVariants}>
-            <CustomButton text='Next' link={{ pathname: '/funds', state: { stocks } }} />
+            <CustomButton text='Next' link={{ pathname: '/hedge', state: { stocks, amount: state.amount } }} />
           </motion.div>
         )}
       </div>

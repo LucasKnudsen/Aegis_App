@@ -21,7 +21,7 @@ const RecommendedFunds = () => {
     <motion.div id='dashboard' style={globals.container}
       variants={containerSlideVaiants} initial='initial' animate='animate' exit='exit'
     >
-      <HeaderNote text={state ? 'Step 2 / 3' : 'Step 1 / 3'} />
+      <HeaderNote text="Step 1 / 3" />
       <p style={{ ...globals.text, marginBottom: 50 }}>How much do you wish to invest for?</p>
 
       <Paper style={{ padding: 15, width: '80%', borderRadius: 10 }}>
@@ -40,7 +40,12 @@ const RecommendedFunds = () => {
       <div style={{ height: 100, marginTop: 75 }}>
         {amount && (
           <motion.div variants={buttonVariants}>
-            <CustomButton text='Next' link={{ pathname: '/hedge', state: { amount, stock: state ? state.stocks : undefined } }} />
+            {state.flow === 'own' ? (
+              <CustomButton text='Next' link={{ pathname: '/choose-stocks', state: { amount } }} />
+            ) : (
+              <CustomButton text='Next' link={{ pathname: '/recommended-stocks', state: { amount } }} />
+            )}
+
           </motion.div>
         )}
       </div>
