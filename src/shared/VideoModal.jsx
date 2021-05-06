@@ -52,10 +52,10 @@ const styles = {
     fontWeight: 'bold',
     borderRadius: 10,
     padding: 10,
-    fontSize: 15,
+    fontSize: 12,
     width: '40%',
     height: '100%',
-    margin: '10px 10px',
+    margin: '0px 10px',
     border: '2px solid #4e4acb',
     boxShadow: 'inset 0 0 10px #202031'
   },
@@ -63,7 +63,6 @@ const styles = {
     position: 'relative',
     margin: 'auto',
     top: '30%',
-
   },
   closeButton: {
     position: 'relative',
