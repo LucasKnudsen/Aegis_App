@@ -34,7 +34,7 @@ const StrategyGraph = ({ data }) => {
       name: data.stock ? data.stock.name : 'GameStop',
       strike: Math.floor(Math.random()*1000),
       itm: 'Yes',
-      date: new Date().toLocaleDateString()
+      date: new Date().toLocaleDateString('en-GB')
     }
     
     profile.stocks.push(newStrategy)
@@ -68,7 +68,7 @@ const StrategyGraph = ({ data }) => {
       </div>
       <AreaChart
         width={380}
-        height={250}
+        height={200}
         data={graphData}
         margin={{ top: 10, right: 30 }}
       >

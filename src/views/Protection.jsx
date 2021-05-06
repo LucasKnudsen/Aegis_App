@@ -35,7 +35,7 @@ export default Protection
 
 const styles = {
   videoButtons: {
-     marginTop: 40, 
+     marginTop: 20, 
      display: 'flex', 
      justifyContent: 'center' 
   }

@@ -88,7 +88,7 @@ const styles = {
   infoContainer: {
     display: 'flex',
     marginTop: 50,
-    width: 400,
+    width: '90%',
     height: 150,
     backgroundColor: 'rgba(45, 40, 61)',
     borderRadius: 10,
@@ -101,11 +101,11 @@ const styles = {
   strategyList: {
     backgroundColor: 'rgba(45, 40, 61)',
     borderRadius: 10,
-    width: '80%',
+    width: '90%',
     height: 'auto',
     marginTop: 50,
     padding: 10,
-    maxHeight: 300,
+    maxHeight: 250,
     overflowY: 'scroll'
   }
 }
