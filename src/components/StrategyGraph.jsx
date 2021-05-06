@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import Button from '@material-ui/core/Button'
+import CheckIcon from '@material-ui/icons/Check';
 
 // import {graphData} from '../assets/graphData'
 
 const StrategyGraph = ({ data }) => {
+  const [added, setAdded] = useState(false)
   const graphData = [
     { year: '2005', Gain: 100 },
     { year: '2006', Gain: 124 },
@@ -24,21 +27,52 @@ const StrategyGraph = ({ data }) => {
     { year: '2021', Gain: 540 },
   ]
 
+  const addStrategy = () => {
+    let profile = JSON.parse(localStorage.getItem('profile'))
+  
+    let newStrategy = {
+      name: data.stock ? data.stock.name : 'GameStop',
+      strike: Math.floor(Math.random()*1000),
+      itm: 'Yes',
+      date: new Date().toLocaleDateString()
+    }
+    
+    profile.stocks.push(newStrategy)
+    localStorage.setItem('profile', JSON.stringify(profile))
+    setAdded(true)
+  
+  }
+
   return (
     <div style={styles.graphContainer}>
-       <div style={styles.stratContainer}>
+      <div style={{ display: 'flex' }}>
+        <div style={styles.stratContainer}>
           <p style={{ fontWeight: 'bold', marginBottom: 5 }}>Stock: {data.stock ? data.stock.name : 'GameStop'}</p>
           <p>a. Sell 3 put. Equity A</p>
           <p>b. Expire date xxxx</p>
           <p>c. Strike price</p>
         </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
+          {added ? (
+            <Button style={styles.button}>
+              <CheckIcon />
+            </Button>
+          ) : (
+            <Button style={styles.button} onClick={addStrategy}>
+              Add to strategies
+            </Button>
+          )}
+
+        </div>
+
+      </div>
       <AreaChart
         width={380}
         height={250}
         data={graphData}
-        margin={{top: 10, right: 30}}
+        margin={{ top: 10, right: 30 }}
       >
-         <CartesianGrid strokeDasharray="3" />
+        <CartesianGrid strokeDasharray="3" />
         <defs>
           <linearGradient id="gain" x1="0" y1="0" x2="0" y2="1">
             <stop offset="20%" stopColor="#4e4acb" stopOpacity={0.9} />
@@ -51,7 +85,7 @@ const StrategyGraph = ({ data }) => {
         <Tooltip />
         <Area type="monotone" dataKey="Gain" stroke="#4e4acb" fill="url(#gain)" />
       </AreaChart>
-    </div>
+    </div >
 
 
   )
@@ -67,9 +101,18 @@ const styles = {
     borderRadius: 10,
   },
   stratContainer: {
-    // position: 'absolute',
+    marginLeft: 15,
     padding: 15,
     fontSize: 15,
-    textAlign: 'center'
   },
+  button: {
+    backgroundColor: '#4e4acb',
+    color: 'white',
+    border: '2px solid #4e4acb',
+    boxShadow: 'inset 0 0 10px #202031',
+    fontWeight: 'bold',
+    width: '55%',
+    height: '50%',
+    margin: 5
+  }
 }
