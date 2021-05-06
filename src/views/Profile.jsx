@@ -90,7 +90,7 @@ const styles = {
     marginTop: 50,
     width: '90%',
     height: 150,
-    backgroundColor: 'rgba(45, 40, 61)',
+    backgroundColor: '#072229',
     borderRadius: 10,
     borderTopLeftRadius: '25%',
     borderBottomLeftRadius: '25%'
@@ -99,7 +99,7 @@ const styles = {
     padding: 25,
   },
   strategyList: {
-    backgroundColor: 'rgba(45, 40, 61)',
+    backgroundColor: '#072229',
     borderRadius: 10,
     width: '90%',
     height: 'auto',

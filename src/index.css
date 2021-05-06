@@ -11,7 +11,7 @@
 
 body {
   overflow: hidden;
-  background: #202031;
+  background: #041b20;
 }
 
 span {
@@ -23,11 +23,11 @@ span {
 }
 
 .MuiAutocomplete-clearIndicator > .MuiIconButton-label {
-  color:  #202031
+  color:  #041b20
 }
 
 .MuiAutocomplete-popupIndicator > .MuiIconButton-label {
-  color:  #202031
+  color:  #041b20
 }
 
 .recharts-text {
@@ -45,6 +45,6 @@ span {
   border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3f51b5;
+  background: #29b380;
   border-radius: 10px;
 }

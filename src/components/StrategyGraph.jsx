@@ -72,14 +72,14 @@ const StrategyGraph = ({ data }) => {
         <CartesianGrid strokeDasharray="3" />
         <defs>
           <linearGradient id="gain" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="20%" stopColor="#115293" stopOpacity={0.9} />
-            <stop offset="95%" stopColor="#4e4acb" stopOpacity={0} />
+            <stop offset="20%" stopColor="#29b380" stopOpacity={0.9} />
+            <stop offset="95%" stopColor="#09393d" stopOpacity={0} />
           </linearGradient>
         </defs>
         <XAxis dataKey="year" />
         <YAxis />
         <Tooltip />
-        <Area type="monotone" dataKey="Gain" stroke="#4e4acb" fill="url(#gain)" />
+        <Area type="monotone" dataKey="Gain" stroke="#29b380" fill="url(#gain)" />
       </AreaChart>
     </div >
   )
@@ -91,7 +91,7 @@ const styles = {
   graphContainer: {
     marginTop: 80,
     padding: 5,
-    backgroundColor: 'rgba(45, 40, 61)',
+    backgroundColor: '#072229',
     borderRadius: 10,
   },
   stratContainer: {
@@ -100,9 +100,9 @@ const styles = {
     fontSize: 15,
   },
   button: {
-    backgroundColor: '#115293',
+    backgroundColor: '#09393d',
     color: 'white',
-    border: '2px solid #115293',
+    border: '1px solid #29b380',
     boxShadow: 'inset 0 0 10px #202031',
     fontWeight: 'bold',
     width: '55%',

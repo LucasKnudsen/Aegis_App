@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
-import {footerVariants} from '../styles/animations'
+import { footerVariants } from '../styles/animations'
 import IconButton from '@material-ui/core/IconButton';
 import ShowChartIcon from '@material-ui/icons/ShowChart';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
@@ -14,39 +14,39 @@ const Footer = ({ location }) => {
   return (
     <motion.div style={styles.footerContainer} variants={footerVariants}
       initial='initial' animate='animate'
-    > 
-    <div style={styles.wrapper}>
-      <p>Home</p>
-      <Link style={styles.iconContainer} to='/dashboard'>
-        <IconButton style={styles.iconButton}>
-          <ShowChartIcon style={styles.icon} />
-        </IconButton>
-      </Link>
-    </div>
+    >
       <div style={styles.wrapper}>
-      <p>About</p>
-      <Link style={styles.iconContainer} to='/about'>
-        <IconButton style={styles.iconButton}>
-          <InfoOutlinedIcon style={styles.icon} />
-        </IconButton>
-      </Link>
-    </div>
+        <Link style={styles.link} to='/dashboard'>
+          <IconButton style={styles.iconButton}>
+            <ShowChartIcon style={styles.icon} />
+          </IconButton>
+          <p>Home</p>
+        </Link>
+      </div>
       <div style={styles.wrapper}>
-      <p>FAQ</p>
-      <Link style={styles.iconContainer} to='/faq'>
-        <IconButton style={styles.iconButton}>
-          <LiveHelpOutlinedIcon style={styles.icon} />
-        </IconButton>
-      </Link>
-    </div>
+        <Link style={styles.link} to='/about'>
+          <IconButton style={styles.iconButton}>
+            <InfoOutlinedIcon style={styles.icon} />
+          </IconButton>
+          <p>About</p>
+        </Link>
+      </div>
       <div style={styles.wrapper}>
-      <p>Profile</p>
-      <Link style={styles.iconContainer} to='/profile'>
-        <IconButton style={styles.iconButton}>
-          <PersonOutlineOutlinedIcon style={styles.icon} />
-        </IconButton>
-      </Link>
-    </div>
+        <Link style={styles.link} to='/faq'>
+          <IconButton style={styles.iconButton}>
+            <LiveHelpOutlinedIcon style={styles.icon} />
+          </IconButton>
+          <p>FAQ</p>
+        </Link>
+      </div>
+      <div style={styles.wrapper}>
+        <Link style={styles.link} to='/profile'>
+          <IconButton style={styles.iconButton}>
+            <PersonOutlineOutlinedIcon style={styles.icon} />
+          </IconButton>
+          <p>Profile</p>
+        </Link>
+      </div>
     </motion.div>
   )
 }
@@ -59,9 +59,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    height: '15vh',
+    height: '10vh',
     width: '100%',
-    backgroundColor: '#115293',
+    backgroundColor: '#09393d',
     zIndex: 2,
     boxShadow: '0px -5px 10px black',
     color: 'white'
@@ -75,13 +75,12 @@ const styles = {
     height: 35,
     width: 35,
   },
-  iconContainer: {
-    border: '2px solid white',
-    borderRadius: '25%',
-    boxShadow: '5px 7px 5px',
-    marginTop: 3,
-  },
   iconButton: {
-    display: 'flex',
+    padding: 0
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'white',
+    textAlign: 'center'
   }
 }

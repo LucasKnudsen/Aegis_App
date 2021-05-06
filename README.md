@@ -1,8 +1,10 @@
 ## Styles:
 
-Main color: #4e4acb
-Dark paper color: rgba(45, 40, 61)
-Dark background color: #202031
+Main color: #29b380
+Secondary color: #09393d
+Dark paper color: #072229
+Dark background color: #041b20
+
 
 TO-DO:
 - Graph design?

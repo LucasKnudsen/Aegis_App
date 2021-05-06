@@ -12,8 +12,8 @@ const Dashboard = () => {
     >
 
       <p style={{ ...globals.title, marginBottom: 50 }}>Welcome to Aegis</p>
-      <CustomButton text='Protect a stock you are interested in' link={{ pathname: '/funds', state: {flow: 'own'}}} margin={'25px 50px'} backgroundColor='#115293' />
-      <CustomButton text='Protect a stock we recommend for you' link={{ pathname: '/funds', state: {flow: 'recommended'} }} margin={'25px 50px'} backgroundColor='#115293' />
+      <CustomButton text='Protect a stock you are interested in' link={{ pathname: '/funds', state: {flow: 'own'}}} margin={'25px 50px'} backgroundColor='#09393d' />
+      <CustomButton text='Protect a stock we recommend for you' link={{ pathname: '/funds', state: {flow: 'recommended'} }} margin={'25px 50px'} backgroundColor='#09393d' />
 
     </motion.div>
   )
