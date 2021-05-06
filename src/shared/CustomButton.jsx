@@ -13,7 +13,7 @@ const CustomButton = ({ text, link, ...props }) => {
     },
     buttonContainer: {
       textDecoration: 'none',
-      border: '2px solid #4e4acb',
+      border: '2px solid #115293',
       padding: '5px 15px',
       borderRadius: 25,
       margin: props.margin ? props.margin : 10,

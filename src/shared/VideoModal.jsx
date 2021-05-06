@@ -47,7 +47,7 @@ export default VideoModal
 
 const styles = {
   modalButton: {
-    backgroundColor: '#4e4acb',
+    backgroundColor: '#115293',
     color: 'white',
     fontWeight: 'bold',
     borderRadius: 10,
@@ -56,7 +56,7 @@ const styles = {
     width: '40%',
     height: '100%',
     margin: '0px 10px',
-    border: '2px solid #4e4acb',
+    border: '2px solid #115293',
     boxShadow: 'inset 0 0 10px #202031'
   },
   modalContainer: {
@@ -66,8 +66,8 @@ const styles = {
   },
   closeButton: {
     position: 'relative',
-    backgroundColor: '#4e4acb',
-    border: '2px solid #4e4acb',
+    backgroundColor: '#115293',
+    border: '2px solid #115293',
     color: 'white',
     fontWeight: 'bold',
     boxShadow: 'inset 0 0 10px #202031',

@@ -72,7 +72,7 @@ const StrategyGraph = ({ data }) => {
         <CartesianGrid strokeDasharray="3" />
         <defs>
           <linearGradient id="gain" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="20%" stopColor="#4e4acb" stopOpacity={0.9} />
+            <stop offset="20%" stopColor="#115293" stopOpacity={0.9} />
             <stop offset="95%" stopColor="#4e4acb" stopOpacity={0} />
           </linearGradient>
         </defs>
@@ -100,9 +100,9 @@ const styles = {
     fontSize: 15,
   },
   button: {
-    backgroundColor: '#4e4acb',
+    backgroundColor: '#115293',
     color: 'white',
-    border: '2px solid #4e4acb',
+    border: '2px solid #115293',
     boxShadow: 'inset 0 0 10px #202031',
     fontWeight: 'bold',
     width: '55%',

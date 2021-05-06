@@ -61,7 +61,7 @@ const styles = {
     alignItems: 'center',
     height: '15vh',
     width: '100%',
-    backgroundColor: '#4e4acb',
+    backgroundColor: '#115293',
     zIndex: 2,
     boxShadow: '0px -5px 10px black',
     color: 'white'
