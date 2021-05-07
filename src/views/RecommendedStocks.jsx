@@ -34,7 +34,7 @@ const RecommendedStocks = () => {
                 <TableRow key={stock}>
                   <TableCell style={{fontWeight: 'bold'}} >{stock}</TableCell>
                   <TableCell>
-                    <CustomButton text='Choose' fontSize={12} backgroundColor='#4e4acb' link={{pathname: '/hedge', state: {amount: state.amount, stocks: {name: stock}}}} />
+                    <CustomButton text='Choose' fontSize={12} backgroundColor='#09393d' link={{pathname: '/hedge', state: {amount: state.amount, stocks: {name: stock}}}} />
                   </TableCell>
                 </TableRow>
               ))}

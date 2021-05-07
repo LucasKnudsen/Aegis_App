@@ -7,10 +7,6 @@ Dark background color: #041b20
 
 
 TO-DO:
-- Graph design?
-- Profile section
-- Local storage to profile section
-
 - Deployment on AWS
 - Login flow
 - Profile functionality
